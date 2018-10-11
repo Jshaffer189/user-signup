@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+    <p><h1>SignUp!</h1></p>
+    <style>
+        .error { color: red; }
+    </style>
+
+    <form method='POST'>
+
+        <!--Username-->
+        <label>Username (3-20 characters)
+            <input name='username' type='text' value='{{username}}' />
+        </label>
+        <p class="error">{{username_error}}</p>
+
+        <!--Password-->
+        <label>Password (3-20 characters)
+            <input name='password' type ='password' value='{{password}}' />
+        </label>
+        <p class="error">{{password_error}}</p>
+
+        <!--Retype Password-->
+        <label>Retype Password
+            <input name='retype' type="password" value="{{retype}}" />
+        </label>
+        <p class="error">{{retype_error}}</p>
+
+        <!--email-->
+        <label>Email (optional)
+            <input name="mail" type="text" Value="{{mail}}" />
+        </label>
+        <p class="error">{{mail_error}}</p>
+
+
+
+
+        <input type="submit" value="Validate" />
+    </form>
+</body>
+{% endblock %}
